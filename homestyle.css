@@ -1,0 +1,12 @@
+h1 {
+    background-color: black;
+    color: white;
+    font-size: 70px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px cyan, 
+        0 0 20px cyan,
+        0 0 40px cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
