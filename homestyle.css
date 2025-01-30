@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: white;
 }
 
 header {
@@ -16,25 +17,60 @@ nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
 }
 
-nav ul li button {
-    background-color: #555;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+.nav-button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 1px ridge #d3d3d3;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-nav ul li button:hover {
-    background-color: #777;
+.nav-button::after {
+    content: "";
+     position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.nav-button::before {
+    content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+.nav-button::before, .nav-button::after {
+    transform: scale(0)
+}
+
+.nav-button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
 }
 
 section {
@@ -43,5 +79,5 @@ section {
     padding: 20px;
     text-align: center;
     margin: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
 }
